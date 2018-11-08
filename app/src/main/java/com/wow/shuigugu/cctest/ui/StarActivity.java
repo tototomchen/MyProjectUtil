@@ -27,6 +27,7 @@ public class StarActivity extends FragmentActivity {
         setContentView(R.layout.activity_star);
         bindViews();
 
+
         sb.setOnStarChangeListener(new StarBar.OnStarChangeListener() {
             @Override
             public void onStarChange(float mark) {
