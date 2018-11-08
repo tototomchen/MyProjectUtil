@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <com.wow.shuigugu.cctest.view.StarBar
+        android:id="@+id/sb"
+        android:layout_below="@+id/display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ratingbar:starEmpty="@mipmap/star_empty"
+        ratingbar:starFill="@mipmap/star_full"
+        ratingbar:starDistance="5dp"
+        ratingbar:starCount="5"
+        ratingbar:starSize="30dp"></com.wow.shuigugu.cctest.view.StarBar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="整数"
+            android:id="@+id/tv_zhengshu"/>
+    </LinearLayout>
+
+</LinearLayout>

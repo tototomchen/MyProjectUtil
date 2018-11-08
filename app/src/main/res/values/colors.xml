@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--字体颜色-->
+    <color name="font_black">#5a5858</color><!-- 黑色字颜色 -->
+    <color name="font_gray">#b4b4b4</color><!-- 灰色字颜色 -->
+    <color name="font_blue">#7cc8ef</color><!-- 灰色字颜色 -->
+    <color name="font_red">#e13f2c</color><!-- 红色字颜色 -->
+
+</resources>
