@@ -23,8 +23,8 @@ public class UtilSpanString {
         SpannableStringBuilder spanableInfo = new SpannableStringBuilder(a+b+c);
         spanableInfo.setSpan(new Clickable(context,nameClick), 0, a.length(), Spanned.SPAN_MARK_MARK);
         spanableInfo.setSpan(new Clickable(context,itemClick), a.length(), (a+b+c).length(), Spanned.SPAN_MARK_MARK);
-        spanableInfo.setSpan(new ForegroundColorSpan(context.getResources().getColor(R.color.font_blue)), 0, a.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spanableInfo.setSpan(new ForegroundColorSpan(context.getResources().getColor(R.color.font_black)), a.length(), (a+b+c).length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spanableInfo.setSpan(new ForegroundColorSpan(context.getResources().getColor(R.color.fontBlue)), 0, a.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spanableInfo.setSpan(new ForegroundColorSpan(context.getResources().getColor(R.color.fontBlack)), a.length(), (a+b+c).length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         return spanableInfo;
     }
     public static class Clickable extends ClickableSpan implements View.OnClickListener {

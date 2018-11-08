@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 
+import com.wow.shuigugu.cctest.ui.BaseFunctionActivity;
 import com.wow.shuigugu.cctest.ui.StarActivity;
 import com.wow.shuigugu.cctest.ui.VpTestActivity;
 import com.wow.shuigugu.cctest.view.FadingScrollView;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private View layout;
     private FadingScrollView fadingScrollView;
     private TextView tv_star;
+    private TextView tv_base;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,12 +42,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent star = new Intent(MainActivity.this,StarActivity.class);
                 startActivity(star);
                 break;
-        };
+            case R.id.tv_base:
+                Intent base = new Intent(MainActivity.this,BaseFunctionActivity.class);
+                startActivity(base);
+                break;
+        }
     }
 
     private void bindListener() {
         layout.setOnClickListener(this);
         tv_star.setOnClickListener(this);
+        tv_base.setOnClickListener(this);
     }
 
     private void bindViews() {
@@ -53,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         layout = findViewById(R.id.nac_layout);
         tv_star = findViewById(R.id.tv_star);
+        tv_base = findViewById(R.id.tv_base);
         layout.setAlpha(0);
         fadingScrollView = (FadingScrollView)findViewById(R.id.nac_root);
         fadingScrollView.setFadingView(layout);

@@ -20,6 +20,8 @@
             android:screenOrientation="portrait"></activity>
         <activity android:name="com.wow.shuigugu.cctest.ui.StarActivity"
             android:screenOrientation="portrait"></activity>
+        <activity android:name="com.wow.shuigugu.cctest.ui.BaseFunctionActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

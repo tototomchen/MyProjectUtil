@@ -1,6 +1,7 @@
 package com.wow.shuigugu.cctest.util;
 
 import android.content.Context;
+import android.view.Gravity;
 import android.widget.Toast;
 
 /**
@@ -22,6 +23,7 @@ public class UtilToast {
             toast.setText(msg);
             toast.setDuration(Toast.LENGTH_SHORT);
         }
+        toast.setGravity(Gravity.CENTER,0,0);
         toast.show();
     }
 }

@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/ll_content">
     <com.wow.shuigugu.cctest.view.StarBar
         android:id="@+id/sb"
         android:layout_below="@+id/display"

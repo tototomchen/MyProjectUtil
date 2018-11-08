@@ -26,7 +26,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="50dp"
                 android:gravity="center"
                 android:text="夜间模式"
                 android:textSize="22dp"
@@ -34,14 +34,14 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="50dp"
                 android:gravity="center"
                 android:text="白天模式"
                 android:textSize="22dp"
                 android:id="@+id/tv_day"/>
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="50dp"
                 android:gravity="center"
                 android:text="星星评分"
                 android:textSize="22dp"
@@ -49,10 +49,11 @@
             StarActivity
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="50dp"
                 android:gravity="center"
-                android:text="其他布局：最好是listview、recycleView"
-                android:textSize="22dp" />
+                android:text="基础页面功能"
+                android:textSize="22dp"
+                android:id="@+id/tv_base"/>
 
             <TextView
                 android:layout_width="match_parent"

@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.wow.shuigugu.cctest.R;
+import com.wow.shuigugu.cctest.base.BaseActivity;
 import com.wow.shuigugu.cctest.util.UtilLog;
 import com.wow.shuigugu.cctest.util.UtilToast;
 import com.wow.shuigugu.cctest.view.StarBar;
@@ -16,7 +17,7 @@ import com.wow.shuigugu.cctest.view.StarBar;
  * 星星评分
  * Created by cl on 2018/11/7.
  */
-public class StarActivity extends FragmentActivity {
+public class StarActivity extends BaseActivity {
 
     private TextView tv_zhengshu;
     private StarBar sb;
@@ -24,10 +25,8 @@ public class StarActivity extends FragmentActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_star);
+        setViewTitleAndLoad(R.layout.activity_star);
         bindViews();
-
-
         sb.setOnStarChangeListener(new StarBar.OnStarChangeListener() {
             @Override
             public void onStarChange(float mark) {
