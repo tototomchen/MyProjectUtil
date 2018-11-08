@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 /**
- * 基础页
+ * 基础view
  * Created by cl on 2018/11/7.
  */
 public class BaseLayout extends RelativeLayout {
