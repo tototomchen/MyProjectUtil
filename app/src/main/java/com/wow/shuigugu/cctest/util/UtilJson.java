@@ -11,6 +11,7 @@ import com.google.gson.Gson;
  *         2015年10月28日上午8:41:41
  */
 public class UtilJson {
+
     /**
      * Gson解析-泛型
      *

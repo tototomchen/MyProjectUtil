@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:id="@+id/ll_content">
+    android:id="@+id/ll_content"
+    style="@style/anim_photo_select">
     <com.wow.shuigugu.cctest.view.StarBar
         android:id="@+id/sb"
         android:layout_below="@+id/display"
@@ -24,7 +25,35 @@
             android:layout_height="wrap_content"
             android:textSize="20dp"
             android:text="整数"
-            android:id="@+id/tv_zhengshu"/>
-    </LinearLayout>
+            android:id="@+id/tv_zhengshu"
+            android:background="@drawable/selector_test"/>
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="测试Toast"
+            android:id="@+id/tv_toast"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="整数"
+            android:background="@color/fontRed"/>
+
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="测试Toast"
+            android:background="@color/fontBlue"/>
+    </LinearLayout>
 </LinearLayout>

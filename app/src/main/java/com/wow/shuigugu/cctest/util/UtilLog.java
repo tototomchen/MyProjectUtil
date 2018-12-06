@@ -3,6 +3,7 @@ package com.wow.shuigugu.cctest.util;
 import android.util.Log;
 
 public class UtilLog {
+
 	public static boolean  isDebug=true;//是不是调试
 	public static void e(String tag,String msg){
 		if(isDebug){

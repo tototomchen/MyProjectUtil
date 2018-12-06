@@ -8,7 +8,13 @@ import android.widget.Toast;
  * Created by cl on 2018/11/7.
  */
 public class UtilToast {
-
+    static {
+        UtilLog.e("tag","UtilToast    static");
+    }
+    public UtilToast(){
+        super();
+        UtilLog.e("tag","UtilToast构造出生了！！！！");
+    }
     static Toast toast = null;
 
     /**
@@ -17,6 +23,7 @@ public class UtilToast {
      * @param msg
      */
     public static void shortgmsg(Context context, String msg){
+        UtilLog.e("tag","shortgmsg");
         if(toast==null){
             toast = Toast.makeText(context, msg, Toast.LENGTH_SHORT);
         }else{
