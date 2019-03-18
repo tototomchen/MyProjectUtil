@@ -19,7 +19,7 @@ public class UtilJson {
      * @param classOfT 泛型
      * @return
      */
-    public static <T> T toGson(String json, Class<T> classOfT) {
+    public static <T> T toJson(String json, Class<T> classOfT) {
         Gson gson = new Gson();
         return gson.fromJson(json, classOfT);
     }

@@ -36,7 +36,7 @@ public class UtilTime {
         return newTime;
     }
 
-    public static String createStamp(String time, String type) {
+    public static String getStamp(String time, String type) {
         if(type!=null){
             formatter = new SimpleDateFormat(type);
         }else{
@@ -50,6 +50,14 @@ public class UtilTime {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+        return newTime;
+    }
+
+
+    //获取当前时间戳
+    public static String getTimeStamp(){
+        String newTime = null;
+        newTime=System.currentTimeMillis()/1000+"";
         return newTime;
     }
 }

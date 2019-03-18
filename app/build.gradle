@@ -1,10 +1,18 @@
 apply plugin: 'com.android.application'
 
 android {
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.wow.shuigugu.cctest"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -14,6 +22,18 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+
+        sourceCompatibility JavaVersion.VERSION_1_8
+
+        targetCompatibility JavaVersion.VERSION_1_8
+
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
         }
     }
 }
@@ -26,4 +46,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation files('libs/gson-2.2.1.jar')
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    provided 'com.nineoldandroids:library:2.4.0'
+    implementation 'cn.jzvd:jiaozivideoplayer:6.4.1'
 }
