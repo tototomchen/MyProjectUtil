@@ -27,14 +27,6 @@ public class BimActivity extends AppCompatActivity {
     BIMView bimView;
     private TextView tv_open;
 
-
-    static final String[] PERMISSIONS = new String[]{
-            Manifest.permission.RECORD_AUDIO,
-            Manifest.permission.CAMERA,
-            Manifest.permission.READ_EXTERNAL_STORAGE
-    };
-    int REQUEST_READ_EXTERNAL_STORAGE_PERMISSION = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
