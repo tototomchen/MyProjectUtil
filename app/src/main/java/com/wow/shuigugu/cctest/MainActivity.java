@@ -11,6 +11,8 @@ import android.view.Window;
 import android.widget.TextView;
 
 import com.wow.shuigugu.cctest.ui.BaseFunctionActivity;
+import com.wow.shuigugu.cctest.ui.BimActivity;
+import com.wow.shuigugu.cctest.ui.ImageUtilActivity;
 import com.wow.shuigugu.cctest.ui.RotatingScreenActivity;
 import com.wow.shuigugu.cctest.ui.StarActivity;
 import com.wow.shuigugu.cctest.ui.VpTestActivity;
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView tv_star;
     private TextView tv_base;
     private TextView tv_screen;
+    private TextView tv_image;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +55,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent screen = new Intent(MainActivity.this,RotatingScreenActivity.class);
                 startActivity(screen);
                 break;
+            case R.id.tv_image:
+                Intent image = new Intent(MainActivity.this,ImageUtilActivity.class);
+                startActivity(image);
+                break;
         }
     }
 
@@ -60,11 +67,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tv_star.setOnClickListener(this);
         tv_base.setOnClickListener(this);
         tv_screen.setOnClickListener(this);
+        tv_image.setOnClickListener(this);
     }
 
     private void bindViews() {
 
 
+        tv_image = findViewById(R.id.tv_image);
         layout = findViewById(R.id.nac_layout);
         tv_star = findViewById(R.id.tv_star);
         tv_base = findViewById(R.id.tv_base);

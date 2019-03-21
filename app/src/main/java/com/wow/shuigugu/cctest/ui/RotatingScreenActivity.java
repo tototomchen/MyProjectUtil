@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
@@ -151,9 +152,10 @@ public class RotatingScreenActivity extends BaseActivity {
 //                        .setNumber(3)
 //                        .build();
 //                manager.notify(2, notification);
-                LinearLayout.LayoutParams upArrowParams = (LinearLayout.LayoutParams) tv_jiaobiao.getLayoutParams();
-                upArrowParams.leftMargin = upArrowParams.leftMargin+100;
-                tv_jiaobiao.setLayoutParams(upArrowParams);
+//                LinearLayout.LayoutParams upArrowParams = (LinearLayout.LayoutParams) tv_jiaobiao.getLayoutParams();
+//                upArrowParams.leftMargin = upArrowParams.leftMargin+100;
+//                tv_jiaobiao.setLayoutParams(upArrowParams);
+
             }
         });
         tv_show.setOnClickListener(new View.OnClickListener() {
@@ -230,6 +232,16 @@ public class RotatingScreenActivity extends BaseActivity {
                 UtilLog.e("tag", "------"+System.currentTimeMillis()/1000+"");
             }
         });
+    }
+
+    //保留两位小数
+    public static String keepTwoDecimal(double text){
+        DecimalFormat df = new DecimalFormat("#.00");
+        String result=df.format(text);
+        if(result.startsWith(".")){
+            result=0+result;
+        }
+        return result;
     }
 
     private void showPW() {

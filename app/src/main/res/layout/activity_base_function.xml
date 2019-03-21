@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView
-        style="@style/text_black_14"
-        android:text="加载中"
-        android:layout_margin="10dp"
-        android:id="@+id/tv_loading"/>
-    <TextView
-        style="@style/text_black_14"
-        android:text="无网络"
-        android:layout_margin="10dp"
-        android:id="@+id/tv_no_net"/>
-    <TextView
-        style="@style/text_black_14"
-        android:text="请求失败"
-        android:layout_margin="10dp"
-        android:id="@+id/tv_no_data"/>
-</LinearLayout>
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_loading"
+            style="@style/text_black_14"
+            android:layout_margin="10dp"
+            android:text="加载中" />
+
+        <TextView
+            android:id="@+id/tv_no_net"
+            style="@style/text_black_14"
+            android:layout_margin="10dp"
+            android:text="无网络" />
+
+        <TextView
+            android:id="@+id/tv_no_data"
+            style="@style/text_black_14"
+            android:layout_margin="10dp"
+            android:text="请求失败" />
+    </LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
+
