@@ -25,6 +25,7 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.wow.shuigugu.cctest.R;
 import com.wow.shuigugu.cctest.base.BaseActivity;
@@ -282,10 +283,21 @@ public class RotatingScreenActivity extends BaseActivity {
         ll_content = findViewById(R.id.ll_content);
         srv_test = findViewById(R.id.srv_test);
         tv_jiaobiao = findViewById(R.id.tv_jiaobiao);
-        JzvdStd jzVideoPlayerStandard = (JzvdStd) findViewById(R.id.videoplayer);
+        com.wow.shuigugu.cctest.ui.MyView  jzVideoPlayerStandard = (com.wow.shuigugu.cctest.ui.MyView) findViewById(R.id.videoplayer);
         jzVideoPlayerStandard.setUp("http://jzvd.nathen.cn/c6e3dc12a1154626b3476d9bf3bd7266/6b56c5f0dc31428083757a45764763b0-5287d2089db37e62345123a1be272f8b.mp4"
-                , "饺子闭眼睛",JzvdStd.SCREEN_WINDOW_NORMAL);
+                , "饺子闭眼睛",JzvdStd.SCREEN_WINDOW_FULLSCREEN);
         jzVideoPlayerStandard.thumbImageView.setImageDrawable(getDrawable(R.drawable.ic_launcher_background));
+//        jzVideoPlayerStandard.startVideo();
+//        JzvdStd.startFullscreen(context, JzvdStd.class, path, name);
+        jzVideoPlayerStandard.setOnStateChangeListener(new MyView.OnStateChangeListener() {
+            @Override
+            public void onStateChange(int state) {
+                if(state==JzvdStd.CURRENT_STATE_AUTO_COMPLETE){
+                    UtilToast.shortgmsg(context,"播放完了");
+                    finish();
+                }
+            }
+        });
     }
 
 

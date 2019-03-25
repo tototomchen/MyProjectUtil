@@ -15,11 +15,6 @@
         android:background="@drawable/zhazha"
         android:text="角标+1" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/heiheihei"
-        android:text="角标今天上班角标今天渣渣不上班角标今天渣渣不上班角标今天渣渣不上班角标今天渣渣不上班角标今天渣渣不上班" />
 
     <EditText
         android:id="@+id/et"
@@ -39,7 +34,7 @@
         android:layout_height="wrap_content"
         android:text="最终数据" />
 
-    <cn.jzvd.JzvdStd
+    <com.wow.shuigugu.cctest.ui.MyView
         android:id="@+id/videoplayer"
         android:layout_width="match_parent"
         android:layout_height="200dp" />
